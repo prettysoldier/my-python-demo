@@ -12,21 +12,21 @@ def decorator_func(original_func):
 
 
 # 1.可以通过装饰函数来包裹
-# def func():
-#     print("hello")
-#
-#
+def func():
+    print("hello")
+
+
 # decorated_func = decorator_func(func)
 # decorated_func()
 
 # 2.可以通过 @函数名 来装饰其他函数
 
 
-# @decorator_func
-# def func2():
-#     print("world")
-#
-#
+@decorator_func
+def func2():
+    print("world")
+
+
 # func2()
 
 # 2.如果要被注解的函数有参数
@@ -48,3 +48,11 @@ def func3(name, age):
 
 func3('zhangsan', 5)
 
+
+# 3.带参数的注解函数，可以装饰不带参数的函数，所以decorator_func2才是注解的完整各写法
+@decorator_func2
+def func4():
+    print("hello")
+
+
+func4()
