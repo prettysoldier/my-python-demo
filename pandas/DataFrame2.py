@@ -31,6 +31,11 @@ arr = np.array(df)
 
 # print(type(df))
 # print(type(df['N1']))
+# print(type(df[['N1']]))
+
+# print(df)
+# print(df['N1'])
+# print(df[['N1']])
 
 # df['N1'].cumsum().plot()
 # plt.show()
@@ -47,4 +52,4 @@ groups = df.groupby('Quarter')
 df['Odd_Even'] = ['Odd', 'Even', 'Odd', 'Even', 'Odd', 'Even', 'Odd', 'Even', 'Odd']
 groups2 = df.groupby(['Quarter', 'Odd_Even'])
 # print(groups2.size())
-print(groups2.mean())
+# print(groups2.mean())
