@@ -94,13 +94,13 @@
 # “闭包”的作用——保存函数的状态信息，，如下。使函数的局部变量信息依然可以保存下来
 def marker(step):  # 包装器
 
-    num = 1  # num是自由变量
+    freeVariable = 1  # num是自由变量
 
     def fun1():  # 内部函数
 
-        nonlocal num  # nonlocal关键字的作用和前面的local是一样的，如果不使用该关键字，则不能在内部函数改变“外部变量”的值
-        num = num + step  # 改变外部变量的值（如果只是访问外部变量，则不需要适用nonlocal）
-        print(num)
+        nonlocal freeVariable  # nonlocal关键字的作用和前面的local是一样的，如果不使用该关键字，则不能在内部函数改变“外部变量”的值
+        freeVariable = freeVariable + step  # 改变外部变量的值（如果只是访问外部变量，则不需要适用nonlocal）
+        print(freeVariable)
 
     return fun1
 
